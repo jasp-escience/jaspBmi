@@ -1,17 +1,19 @@
-Package: jaspModuleTemplate
+Package: jaspBmi
 Type: Package
-Title: A module for JASP
+Title: A remote bmi module for JASP
 Version: 0.1.0
 Date: 2020-10-15
-Author: JASP Team
-Website: jasp-stats.org
-Maintainer: JASP Team <info@jasp-stats.org>
-Description: Example module showing basic functionality. Use it for inspiration when creating your own module.
+Author: Stefan Verhoeven
+Website: https://github.com/jasp-escience/jaspBmi
+Maintainer: Stefan Verhoeven <s.verhoeven@esciencecenter.nl>
+Description: Jasp module for interacting with a remote model running the basic model interface (BMI) with [remotebmi](https://github.com/eWaterCycle/remotebmi).
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
   jaspBase,
-  jaspGraphs
+  jaspGraphs,
+  jsonlite,
+  httr2,
 Suggests:
   testthat
 Remotes:

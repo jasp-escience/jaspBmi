@@ -1,7 +1,6 @@
-# jaspModuleTemplate
+# jaspBmi
 
-This template repository is a starting point for developing a new module for JASP.
-It contains the necessary files and structure, plus a numbers of examples to get started.
+Jasp module for interacting with a remote model running the basic model interface (BMI) with [remotebmi](https://github.com/eWaterCycle/remotebmi).
 
 ## How to use this repository
 

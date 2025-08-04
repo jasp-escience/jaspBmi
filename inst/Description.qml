@@ -3,15 +3,15 @@ import JASP.Module
 
 Description
 {
-	name		: "jaspModuleTemplate"
-	title		: qsTr("Jasp Module")
-	description	: qsTr("Examples for module builders")
+	name		: "jaspBmi"
+	title		: qsTr("Jasp BMI client")
+	description	: qsTr("Talk to BMI servers")
 	version		: "0.1"
-	author		: "JASP Team"
-	maintainer	: "JASP Team <info@jasp-stats.org>"
-	website		: "https://jasp-stats.org"
+	author		: "Stefan Verhoeven"
+	maintainer	: "Stefan Verhoeven <s.verhoeven@esciencecenter.nl>"
+	website		: "https://github.com/jasp-escience/jaspBmi"
 	license		: "GPL (>= 2)"
-	icon        : "exampleIcon.png" // Located in /inst/icons/
+	icon        : "bmiIcon.png" // Located in /inst/icons/
 	preloadData: true
 	requiresData: true
 
@@ -26,36 +26,18 @@ Description
 	  title: qsTr("Add one")        // Title for window
 	  menu: qsTr("Add one")         // Title for ribbon
 	  func: "addOne"                // Function to be called
-      qml: "Integer.qml"            // Design input window
+	  qml: "Integer.qml"            // Design input window
 	  requiresData: false           // Allow to run even without data
 	}
-
+	
 	Analysis
 	{
-	  title: qsTr("Load data")
-	  menu: qsTr("Load data")
-	  func: "processData"
-	  qml: "Data.qml"
+	  title: qsTr("BMI Info")        // Title for window
+	  menu: qsTr("BMI Info")         // Title for ribbon
+	  func: "bmiInfo"                // Function to be called
+	  qml: "BmiInfo.qml"             // Design input window
+	  requiresData: false            // Allow to run even without data
 	}
 
-	Analysis
-	{
-	  title: qsTr("Tabular results")
-	  menu: qsTr("Tabular results")
-	  func: "processTable"
-	  qml: "Table.qml"
-	}
 
-	GroupTitle
-	{
-	  title: qsTr("Plotting")
-	}
-
-	Analysis
-	{
-	  title: qsTr("Plot a parabola")
-	  func: "parabola"
-	  qml: "Parabola.qml"
-	  requiresData: false
-	}
 }

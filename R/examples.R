@@ -7,6 +7,26 @@ addOne <- function(jaspResults, dataset, options) {
     return()
 }
 
+bmiInfo <- function(jaspResults, dataset, options) {
+  endpoint <- options$endpoint_url
+
+  url <- paste0(endpoint, "/get_component_name")
+
+  resp <- httr2::request(url) |> httr2::req_perform()
+  resp_json <- jsonlite::fromJSON(httr2::resp_body_string(resp))
+  componentName <- resp_json$name
+
+  jaspResults[["componentName"]] <- createJaspHtml(text = componentName,
+                                                    title = "Component Name:")
+
+  # TODO http://localhost:50051/get_output_var_names
+
+  # TODO loop over output variables to fetch their units
+  # like http://localhost:50051/get_var_units/discharge
+
+  return()
+} 
+
 processData <- function(jaspResults, dataset, options) {
   # Dataset access
   # options$ts --maps to--> 't'

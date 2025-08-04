@@ -1,5 +1,6 @@
 import(jaspBase)
 export(addOne)
+export(bmiInfo)
 export(processData)
 export(processTable)
 export(parabola)
